@@ -5,12 +5,12 @@ from flask import render_template
 from flaskwebgui import FlaskUI # import FlaskUI
 
 app = Flask(__name__)
-ui = FlaskUI(app, width=500, height=500) # add app and parameters
-
+# ui = FlaskUI(app, width=500, height=500) # add app and parameters
+ui = FlaskUI(app)
 
 @app.route("/")
 def hello():
-    return " welcome here "  
+    # return " welcome here "  
     return render_template('index.html')
 
 @app.route("/home", methods=['GET'])
